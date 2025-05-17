@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/v1/Flight/{everything}",
+      "DownstreamPathTemplate": "/api/v1/Flight/query",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,31 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/flight/{everything}",
+      "UpstreamPathTemplate": "/api/flight/query",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Flight/buy",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "airlineapi-kaan.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/flight/buy",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Flight/checkin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "airlineapi-kaan.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/flight/checkin",
       "UpstreamHttpMethod": [ "POST" ]
     }
   ],

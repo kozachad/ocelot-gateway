@@ -40,3 +40,4 @@ C:\Users\PC\ApiGatewayOcelot\obj\Debug\net9.0\refint\ApiGatewayOcelot.dll
 C:\Users\PC\ApiGatewayOcelot\obj\Debug\net9.0\ApiGatewayOcelot.pdb
 C:\Users\PC\ApiGatewayOcelot\obj\Debug\net9.0\ApiGatewayOcelot.genruntimeconfig.cache
 C:\Users\PC\ApiGatewayOcelot\obj\Debug\net9.0\ref\ApiGatewayOcelot.dll
+C:\Users\PC\ApiGatewayOcelot\obj\Debug\net9.0\ApiGatewayOcelot.sourcelink.json
