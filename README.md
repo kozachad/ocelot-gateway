@@ -26,4 +26,79 @@ All requests from the AI Agent are forwarded through this gateway to ensure modu
 
 ## ⚙️ Configuration Overview
 
-All routing is handled through the `ocelot.json` file located in the root directory.
+All routing is handled through the `ocelot.json` file located in the root directory. Example route configuration:
+
+```json
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/flight/query",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "your-api-host",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/flights/query",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://your-gateway-url.com"
+  }
+}
+```
+
+> Replace `"your-api-host"` and `"your-gateway-url.com"` with your actual API and deployment addresses.
+
+---
+
+## 🚀 Running the Project
+
+### Prerequisites
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- Visual Studio or terminal
+
+### Steps to Run
+
+```bash
+# Restore dependencies
+dotnet restore
+
+# Build the project
+dotnet build
+
+# Run the gateway
+dotnet run
+```
+
+By default, the gateway runs at:
+
+```
+https://localhost:5111
+```
+
+---
+
+## 📌 Notes
+
+- This gateway works in conjunction with the following services:
+  - **AI Agent:** [https://github.com/kozachad/airline-ai_agent](https://github.com/kozachad/airline-ai_agent)
+  - **React UI:** [https://github.com/kozachad/airline-react-ui](https://github.com/kozachad/airline-react-ui)
+
+- Ensure that your downstream APIs (query, book, check-in) are running and accessible.
+- JWT tokens must be included in client requests to access protected endpoints.
+
+---
+
+## 👨‍💻 Developer Info
+
+**Name:** Kaan Mert Kozalı  
+**Course:** SE4458 Midterm Project (Spring 2025)  
+**Project Theme:** Flight Reservation System – API Gateway
