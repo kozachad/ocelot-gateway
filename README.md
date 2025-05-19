@@ -100,5 +100,5 @@ https://localhost:5111
 ## 👨‍💻 Developer Info
 
 **Name:** Kaan Mert Kozalı  
-**Course:** SE4458 Midterm Project (Spring 2025)  
+**Course:** SE4458 Assignment-2
 **Project Theme:** Flight Reservation System – API Gateway
