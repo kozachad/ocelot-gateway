@@ -90,7 +90,7 @@ https://localhost:5111
 
 - This gateway works in conjunction with the following services:
   - **AI Agent:** [https://github.com/kozachad/airline-ai_agent](https://github.com/kozachad/airline-ai_agent)
-  - **React UI:** [https://github.com/kozachad/airline-react-ui](https://github.com/kozachad/airline-react-ui)
+  - **React UI:** [https://github.com/kozachad/airline-react-ui](https://github.com/kozachad/airline-ui)
 
 - Ensure that your downstream APIs (query, book, check-in) are running and accessible.
 - JWT tokens must be included in client requests to access protected endpoints.
